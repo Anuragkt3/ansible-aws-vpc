@@ -7,11 +7,11 @@
 
     - name: create a VPC
       ec2_vpc_net:
-         name: "{{vpc_name}}"
-         cidr_block: "{{vpcCidr}}"
-         region: "{{region}}"
+         name: Module_e2
+         cidr_block: 172.20.0.0/16
+         region: us-east-1
          dns_support: yes
          dns_hostnames: yes
-         state: "{{state}}"
+         state: present
          tendency: default
       register: vpcout
