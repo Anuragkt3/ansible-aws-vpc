@@ -14,3 +14,4 @@
            module: ec2_vpc_net
            this: works
          tenancy: dedicated
+      register: vpcout
