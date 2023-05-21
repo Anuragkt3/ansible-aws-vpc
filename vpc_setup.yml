@@ -14,4 +14,3 @@
          dns_hostnames: yes
          state: present
          tendency: default
-      register: vpcout
