@@ -6,7 +6,7 @@
       include_vars: vars/vpc_setup
 
     - name: Create vprofile VPC
-      ec2_key:
+      ansible.builtin.service:
         name: "{{vpc_name}}"
         cidr_block: "{{vpcCidr}}"
         region: "{{region}}"
