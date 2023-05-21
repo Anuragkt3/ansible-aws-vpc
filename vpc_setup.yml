@@ -5,13 +5,13 @@
     - name: Import VPC Variables
       include_vars: vars/vpc_setup
 
-    - name: Create vprofile VPC
-      ansible.builtin.service:
-        name: "{{vpc_name}}"
-        cidr_block: "{{vpcCidr}}"
-        region: "{{region}}"
-        dns_support: yes
-        dns_hostnames: yes
-        tendency: default
-        state: "{{state}}"
+    - name: create a VPC
+      ec2_vpc_net:
+         name: "{{vpc_name}}"
+         cidr_block: "{{vpcCidr}}"
+         region: "{{region}}"
+         dns_support: yes
+         dns_hostnames: yes
+         state: "{{state}}"
+         tendency: default
       register: vpcout
