@@ -37,7 +37,7 @@
       register: BastionSG_out
 
 
-    - name: Creating Bastion Host
+    - name: Save private key into file bastion-key.pem
       ec2:
         key_name: vprofile-key-Anurag
         region: "{{region}}"
