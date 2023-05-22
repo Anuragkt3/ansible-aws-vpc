@@ -37,12 +37,12 @@
       register: BastionSG_out
 
 
-    - name: Save private key into file bastion-key.pem
+    - name: Creating Bastion Host
       ec2:
-        key_name: vprofile-key-Anurag
+        key_name: vprofile-key
         region: "{{region}}"
         instance_type: t2.micro
-        image: "{{ bastion_ami }}"
+        image: "{{ bastion_ami}}"
         wait: yes
         wait_timeout: 300
         instance_tags:
@@ -53,7 +53,7 @@
         count_tag:
           Name: "Bastion_host"
           Project: Vprofile
-          Owner: DevOps Team
+          Owner: Devops Team
         group_id: "{{BastionSG_out.group_id}}"
         vpc_subnet_id: "{{pubsub1id}}"
       register: bastionHost_out
