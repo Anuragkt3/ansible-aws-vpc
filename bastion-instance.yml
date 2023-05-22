@@ -36,8 +36,9 @@
             cidr_ip: "{{ MYIP }}"
       register: BastionSG_out
 
-    - name: Anurag
-      ec2:
+    -  name: Anurag
+
+
 
 
 
