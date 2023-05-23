@@ -1,4 +1,4 @@
-nginx_ami: ami-0261755bbcb8c4a84
+nginx_ami: ami-053b0d53c279acc90
 tomcat_ami: ami-0261755bbcb8c4a84
 memcache_ami: ami-0261755bbcb8c4a84
 rmq_ami: ami-0261755bbcb8c4a84
