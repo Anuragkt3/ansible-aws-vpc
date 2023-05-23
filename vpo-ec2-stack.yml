@@ -65,7 +65,7 @@
 
     - name: Creating Nginx web01
       ec2:
-        key_name: vpokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{nginx_ami}}"
@@ -75,7 +75,7 @@
           Name: "web01"
           Project: Vprofile
           Owner: DevOps Team
-        exact_tag: 1
+        exact_count: 1
         count_tag:
           Name: "web01"
           Project: Vprofile
@@ -83,6 +83,7 @@
         group_id: "{{vproStackSG_out.group_id}}"
         vpc_subnet_id: "{{privsub1id}}"
       register: web01_out
+
 
     - name: Creating tomcat app01
       ec2:
